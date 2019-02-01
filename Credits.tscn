@@ -1,0 +1,115 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Credits.gd" type="Script" id=1]
+[ext_resource path="res://fonts/command_line_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://sounds/credits.wav" type="AudioStream" id=3]
+
+[node name="Credits" type="Container" index="0"]
+
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.0585938, 0.0585938, 0.0585938, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Material" ]
+
+[node name="Label" type="Label" parent="CenterContainer" index="0"]
+
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -91.0
+margin_top = -24.5
+margin_right = 91.0
+margin_bottom = 24.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+text = "Credits"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CreditsDelayTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 4.0
+one_shot = false
+autostart = true
+
+[node name="Tween" type="Tween" parent="." index="3"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Sound" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 3 )
+volume_db = -25.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Music"
+
+[node name="MusicMuteTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 4.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="CreditsDelayTimer" to="." method="_on_CreditsDelayTimer_timeout"]
+
+[connection signal="timeout" from="MusicMuteTimer" to="." method="_on_MusicMuteTimer_timeout"]
+
+

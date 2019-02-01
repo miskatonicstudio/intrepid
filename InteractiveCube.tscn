@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://InteractiveCube.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+
+extents = Vector3( 0.22, 0.22, 0.22 )
+_sections_unfolded = [ "Resource" ]
+
+[node name="InteractiveCube" type="StaticBody"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 2
+collision_mask = 2
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+one_time = false
+raycast_enabled = true
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[connection signal="activated" from="." to="." method="_on_InteractiveCube_activated"]
+
+

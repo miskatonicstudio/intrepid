@@ -1,0 +1,325 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://GamePopup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tablet.gd" type="Script" id=2]
+[ext_resource path="res://images/Tablet_Fungal.png" type="Texture" id=3]
+[ext_resource path="res://images/Tablet_Fungal_notes.png" type="Texture" id=4]
+[ext_resource path="res://images/WifiIcon.png" type="Texture" id=5]
+[ext_resource path="res://images/NotesIcon.png" type="Texture" id=6]
+[ext_resource path="res://images/LocationIcon.png" type="Texture" id=7]
+[ext_resource path="res://shaders/crt_material_small.tres" type="Material" id=8]
+[ext_resource path="res://images/Tablet_Blank.png" type="Texture" id=9]
+
+[node name="Tablet" index="0" instance=ExtResource( 1 )]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Mouse", "Rect" ]
+
+[node name="ScreenSurface" type="Container" parent="CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 418.0
+margin_top = 49.0
+margin_right = 861.0
+margin_bottom = 670.0
+rect_min_size = Vector2( 443, 621 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Rect" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/ScreenSurface" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1329.0
+margin_bottom = 621.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect", "custom_constants" ]
+
+[node name="LeftSplit" type="Sprite" parent="CenterContainer/ScreenSurface/HBoxContainer" index="0"]
+
+self_modulate = Color( 0.746094, 0.746094, 0.746094, 1 )
+texture = ExtResource( 3 )
+centered = false
+_sections_unfolded = [ "Material", "Offset", "Rect", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="MiddleSplit" type="Sprite" parent="CenterContainer/ScreenSurface/HBoxContainer" index="1"]
+
+self_modulate = Color( 0.746094, 0.746094, 0.746094, 1 )
+position = Vector2( 600, 0 )
+centered = false
+_sections_unfolded = [ "Material", "Offset", "Rect", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="RightSplit" type="Sprite" parent="CenterContainer/ScreenSurface/HBoxContainer" index="2"]
+
+self_modulate = Color( 0.746094, 0.746094, 0.746094, 1 )
+position = Vector2( 1200, 0 )
+centered = false
+region_rect = Rect2( 0, 0, 600, 600 )
+_sections_unfolded = [ "Material", "Offset", "Rect", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="Container" type="Container" parent="CenterContainer/ScreenSurface/HBoxContainer" index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_bottom = 990.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="LeftNotes" type="Sprite" parent="CenterContainer/ScreenSurface/HBoxContainer/Container" index="0"]
+
+texture = ExtResource( 4 )
+centered = false
+region_rect = Rect2( 0, 0, 600, 600 )
+_sections_unfolded = [ "Material", "Offset", "Rect", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="MiddleNotes" type="Sprite" parent="CenterContainer/ScreenSurface/HBoxContainer/Container" index="1"]
+
+position = Vector2( 600, 0 )
+centered = false
+region_rect = Rect2( 0, 0, 600, 600 )
+_sections_unfolded = [ "Material", "Offset", "Rect", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="RightNotes" type="Sprite" parent="CenterContainer/ScreenSurface/HBoxContainer/Container" index="2"]
+
+position = Vector2( 1200, 0 )
+centered = false
+region_rect = Rect2( 0, 0, 600, 600 )
+_sections_unfolded = [ "Material", "Offset", "Rect", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="ScreenWithBar" type="Container" parent="CenterContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 418.0
+margin_top = 49.0
+margin_right = 861.0
+margin_bottom = 670.0
+rect_min_size = Vector2( 443, 621 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Rect" ]
+
+[node name="SettingsBackground" type="ColorRect" parent="CenterContainer/ScreenWithBar" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.0996094, 0.123108, 0.25, 0.679569 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/ScreenWithBar/SettingsBackground" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -242.0
+margin_top = -64.0
+margin_right = 242.0
+margin_bottom = 64.0
+rect_scale = Vector2( 0.6, 0.6 )
+rect_pivot_offset = Vector2( 242, 64 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 50
+alignment = 1
+_sections_unfolded = [ "Rect", "custom_constants" ]
+
+[node name="WiFiButton" type="TextureButton" parent="CenterContainer/ScreenWithBar/SettingsBackground/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 128.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "Textures", "Visibility" ]
+
+[node name="PenButton" type="TextureButton" parent="CenterContainer/ScreenWithBar/SettingsBackground/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 178.0
+margin_right = 306.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Textures", "Visibility" ]
+
+[node name="GpsButton" type="TextureButton" parent="CenterContainer/ScreenWithBar/SettingsBackground/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 356.0
+margin_right = 484.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 7 )
+_sections_unfolded = [ "Rect", "Textures", "Visibility" ]
+
+[node name="CRT" type="ColorRect" parent="CenterContainer" index="2"]
+
+material = ExtResource( 8 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 418.0
+margin_top = 49.0
+margin_right = 861.0
+margin_bottom = 670.0
+rect_min_size = Vector2( 443, 621 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Material", "Mouse", "Rect" ]
+
+[node name="Frame" type="TextureRect" parent="." index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -512.0
+margin_right = 512.0
+margin_bottom = 512.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 0
+_sections_unfolded = [ "Material", "Mouse", "Rect", "Size Flags" ]
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="Tween" type="Tween" parent="." index="3"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+_sections_unfolded = [ "playback" ]
+
+[connection signal="gui_input" from="CenterContainer/ScreenSurface" to="." method="_on_ScreenSurface_gui_input"]
+
+[connection signal="gui_input" from="CenterContainer/ScreenWithBar/SettingsBackground" to="." method="_on_SettingsBackground_gui_input"]
+
+[connection signal="toggled" from="CenterContainer/ScreenWithBar/SettingsBackground/HBoxContainer/WiFiButton" to="." method="_on_WiFiButton_toggled"]
+
+[connection signal="toggled" from="CenterContainer/ScreenWithBar/SettingsBackground/HBoxContainer/PenButton" to="." method="_on_PenButton_toggled"]
+
+[connection signal="toggled" from="CenterContainer/ScreenWithBar/SettingsBackground/HBoxContainer/GpsButton" to="." method="_on_GpsButton_toggled"]
+
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
+
+

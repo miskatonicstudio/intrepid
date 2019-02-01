@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://SkyCube.gd" type="Script" id=1]
+[ext_resource path="res://Nebula_light_front.png" type="Texture" id=2]
+[ext_resource path="res://Nebula_light_right.png" type="Texture" id=3]
+[ext_resource path="res://Nebula_light_back.png" type="Texture" id=4]
+[ext_resource path="res://Nebula_light_left.png" type="Texture" id=5]
+[ext_resource path="res://Nebula_light_up.png" type="Texture" id=6]
+[ext_resource path="res://Nebula_light_down.png" type="Texture" id=7]
+[ext_resource path="res://sky_cube.obj" type="ArrayMesh" id=8]
+
+[node name="SkyCube" type="Spatial"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+front = ExtResource( 2 )
+right = ExtResource( 3 )
+back = ExtResource( 4 )
+left = ExtResource( 5 )
+up = ExtResource( 6 )
+down = ExtResource( 7 )
+
+[node name="Mesh" type="MeshInstance" parent="." index="0"]
+
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+layers = 1
+material_override = null
+cast_shadow = 0
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 8 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+_sections_unfolded = [ "Geometry", "Transform", "material" ]
+
+

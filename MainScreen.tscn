@@ -1,0 +1,351 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://MainScreen.gd" type="Script" id=1]
+[ext_resource path="res://intrepid_logo.png" type="Texture" id=2]
+[ext_resource path="res://MenuButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sounds/main_music_loop.wav" type="AudioStream" id=4]
+[ext_resource path="res://styles/settings_background.tres" type="StyleBox" id=5]
+[ext_resource path="res://Settings.tscn" type="PackedScene" id=6]
+[ext_resource path="res://fonts/game_settings_font.tres" type="DynamicFont" id=7]
+[ext_resource path="res://CustomCursor.tscn" type="PackedScene" id=8]
+
+[node name="MainScreen" type="Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Background" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Margin", "Mouse", "Size Flags" ]
+
+[node name="MenuButtons" type="HBoxContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -140.0
+margin_bottom = -97.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 32
+alignment = 1
+_sections_unfolded = [ "Anchor", "Margin", "Material", "Mouse", "Visibility", "custom_constants" ]
+
+[node name="Game" parent="MenuButtons" index="0" instance=ExtResource( 3 )]
+
+margin_left = 76.0
+margin_right = 276.0
+rect_min_size = Vector2( 200, 0 )
+text = "Play"
+
+[node name="Settings" parent="MenuButtons" index="1" instance=ExtResource( 3 )]
+
+margin_left = 308.0
+margin_right = 508.0
+rect_min_size = Vector2( 200, 0 )
+text = "Settings"
+
+[node name="Credits" parent="MenuButtons" index="2" instance=ExtResource( 3 )]
+
+margin_left = 540.0
+margin_right = 740.0
+rect_min_size = Vector2( 200, 0 )
+text = "Credits"
+
+[node name="Resources" parent="MenuButtons" index="3" instance=ExtResource( 3 )]
+
+margin_left = 772.0
+margin_right = 972.0
+rect_min_size = Vector2( 200, 0 )
+text = "Resources"
+
+[node name="Exit" parent="MenuButtons" index="4" instance=ExtResource( 3 )]
+
+margin_left = 1004.0
+margin_right = 1204.0
+rect_min_size = Vector2( 200, 0 )
+text = "Exit"
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 4 )
+volume_db = -8.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Music"
+
+[node name="SettingsButtons" type="CenterContainer" parent="." index="3"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -325.0
+margin_right = 500.0
+margin_bottom = 325.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Panel" type="Panel" parent="SettingsButtons" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1000.0
+margin_bottom = 650.0
+rect_min_size = Vector2( 1000, 650 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/panel = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "Size Flags", "custom_styles" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsButtons/Panel" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -484.0
+margin_top = -288.5
+margin_right = 484.0
+margin_bottom = 288.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 40
+alignment = 0
+_sections_unfolded = [ "Rect", "custom_constants" ]
+
+[node name="Settings" parent="SettingsButtons/Panel/VBoxContainer" index="0" instance=ExtResource( 6 )]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 968.0
+margin_bottom = 494.0
+_sections_unfolded = [ "Rect" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="SettingsButtons/Panel/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 534.0
+margin_right = 968.0
+margin_bottom = 577.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="Back" parent="SettingsButtons/Panel/VBoxContainer/CenterContainer" index="0" instance=ExtResource( 3 )]
+
+margin_left = 384.0
+margin_right = 584.0
+rect_min_size = Vector2( 200, 0 )
+text = "Back"
+_sections_unfolded = [ "Rect", "custom_fonts", "custom_styles" ]
+
+[node name="Resources" type="CenterContainer" parent="." index="4"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="Panel" type="Panel" parent="Resources" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 90.0
+margin_top = 35.0
+margin_right = 1190.0
+margin_bottom = 685.0
+rect_min_size = Vector2( 1100, 650 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/panel = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "custom_styles" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Resources/Panel" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -535.5
+margin_top = -343.5
+margin_right = 535.5
+margin_bottom = 343.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 120
+alignment = 1
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Label" type="Label" parent="Resources/Panel/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 53.0
+margin_right = 1071.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Resources with attribution licenses"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Resources/Panel/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 208.0
+margin_right = 1071.0
+margin_bottom = 471.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "https://www.fontsquirrel.com/fonts/fira-mono
+https://visibleearth.nasa.gov/view.php?id=57747
+https://github.com/AaronWizard/CRTScreenShader
+https://freesound.org/people/spoonsandlessspoons/sounds/361333/
+https://freesound.org/people/JustInvoke/sounds/446110/
+https://freesound.org/people/OGsoundFX/sounds/423120/
+https://www.pmsfx.com/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Resources/Panel/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 591.0
+margin_right = 1071.0
+margin_bottom = 634.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="BackFromResources" parent="Resources/Panel/VBoxContainer/CenterContainer" index="0" instance=ExtResource( 3 )]
+
+margin_left = 420.0
+margin_right = 651.0
+rect_min_size = Vector2( 231, 43 )
+text = "Back"
+_sections_unfolded = [ "Rect", "custom_fonts", "custom_styles" ]
+
+[node name="CustomCursor" parent="." index="5" instance=ExtResource( 8 )]
+
+[connection signal="pressed" from="MenuButtons/Game" to="." method="_on_Game_pressed"]
+
+[connection signal="pressed" from="MenuButtons/Settings" to="." method="_on_Settings_pressed"]
+
+[connection signal="pressed" from="MenuButtons/Credits" to="." method="_on_Credits_pressed"]
+
+[connection signal="pressed" from="MenuButtons/Resources" to="." method="_on_Resources_pressed"]
+
+[connection signal="pressed" from="MenuButtons/Exit" to="." method="_on_Exit_pressed"]
+
+[connection signal="pressed" from="SettingsButtons/Panel/VBoxContainer/CenterContainer/Back" to="." method="_on_Back_pressed"]
+
+[connection signal="pressed" from="Resources/Panel/VBoxContainer/CenterContainer/BackFromResources" to="." method="_on_BackFromResources_pressed"]
+
+

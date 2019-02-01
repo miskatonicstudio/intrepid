@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ChairWithTablet.gd" type="Script" id=1]
+[ext_resource path="res://Chair.tscn" type="PackedScene" id=2]
+[ext_resource path="res://InteractiveInventoryCube.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TabletModel.tscn" type="PackedScene" id=4]
+
+[node name="ChairWithTablet" type="Spatial"]
+
+script = ExtResource( 1 )
+
+[node name="Chair" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Tablet" parent="." index="1" instance=ExtResource( 3 )]
+
+transform = Transform( 0.566397, 0, -0.586185, 0, 0.332547, 0, 0.44151, 0, 0.751995, -0.126148, 0.646097, 0.272088 )
+
+[node name="Model" parent="Tablet" index="2" instance=ExtResource( 4 )]
+
+transform = Transform( 1.38525, 0, -0.141617, 0, 3.00709, 0, 0.106665, 0, 1.04336, 0.00122274, -0.264885, -0.000549212 )
+
+[connection signal="activated" from="Tablet" to="." method="_on_Tablet_activated"]
+
+

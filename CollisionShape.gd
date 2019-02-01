@@ -1,0 +1,3 @@
+extends CollisionShape
+
+signal activated

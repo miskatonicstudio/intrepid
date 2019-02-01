@@ -1,0 +1,146 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GameViewportPopup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PlanetSchedule.gd" type="Script" id=2]
+[ext_resource path="res://images/Planet_Popup.png" type="Texture" id=3]
+[ext_resource path="res://PlanetScheduleScreenContent.tscn" type="PackedScene" id=4]
+[ext_resource path="res://shaders/crt_material_pla_scheduler.tres" type="Material" id=5]
+
+[node name="PlanetSchedule" instance=ExtResource( 1 )]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+screen_width = 1161
+screen_height = 458
+
+[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -581.0
+margin_top = -257.0
+margin_right = 580.0
+margin_bottom = 201.0
+rect_min_size = Vector2( 1161, 458 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Anchor", "Mouse", "Rect" ]
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -320.0
+margin_top = -121.0
+margin_right = 1480.0
+margin_bottom = 579.0
+rect_min_size = Vector2( 1800, 700 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.921875, 0.13324, 0.13324, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1161.0
+margin_bottom = 458.0
+rect_min_size = Vector2( 1161, 458 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Rect" ]
+
+[node name="Frame" type="TextureRect" parent="." index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1024.0
+margin_top = -540.0
+margin_right = 1024.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+_sections_unfolded = [ "Mouse", "Rect" ]
+
+[node name="Viewport" type="Viewport" parent="." index="2"]
+
+arvr = false
+size = Vector2( 1161, 458 )
+own_world = false
+world = null
+transparent_bg = false
+msaa = 0
+hdr = false
+disable_3d = true
+usage = 0
+debug_draw = 0
+render_target_v_flip = true
+render_target_clear_mode = 0
+render_target_update_mode = 2
+audio_listener_enable_2d = false
+audio_listener_enable_3d = false
+physics_object_picking = false
+gui_disable_input = false
+gui_snap_controls_to_pixels = false
+shadow_atlas_size = 0
+shadow_atlas_quad_0 = 2
+shadow_atlas_quad_1 = 2
+shadow_atlas_quad_2 = 3
+shadow_atlas_quad_3 = 4
+_sections_unfolded = [ "GUI", "Render Target", "Rendering" ]
+
+[node name="PlanetScheduleScreenContent" parent="Viewport" index="0" instance=ExtResource( 4 )]
+
+[node name="CRT" type="ColorRect" parent="Viewport" index="1"]
+
+material = ExtResource( 5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1161, 458 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Anchor", "Material", "Mouse", "Rect" ]
+
+[connection signal="gui_input" from="CenterContainer/TextureRect" to="." method="_on_TextureRect_gui_input"]
+
+

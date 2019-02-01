@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://styles/console_screen.tres" type="StyleBox" id=1]
+[ext_resource path="res://fonts/command_line_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://AutoTyper.gd" type="Script" id=3]
+[ext_resource path="res://sounds/new_keyboard_sound.wav" type="AudioStream" id=4]
+
+[node name="AutoTyper" type="Label"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 3 )
+_sections_unfolded = [ "custom_styles" ]
+raw_output = "1;hello there;3"
+console_output = null
+autostart = true
+
+[node name="CursorBlinkTimer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = false
+
+[node name="PauseTimer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = true
+autostart = false
+
+[node name="CharTypingTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = false
+
+[node name="Sound" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 4 )
+volume_db = -20.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Effects"
+
+[connection signal="timeout" from="CursorBlinkTimer" to="." method="_on_CursorBlinkTimer_timeout"]
+
+[connection signal="timeout" from="PauseTimer" to="." method="_on_PauseTimer_timeout"]
+
+[connection signal="timeout" from="CharTypingTimer" to="." method="_on_CharTypingTimer_timeout"]
+
+
