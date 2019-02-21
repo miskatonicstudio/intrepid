@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/InteractiveCube.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/InteractiveInventoryCube.gd" type="Script" id=2]
+[ext_resource path="res://sounds/inventory_pick_up_item.wav" type="AudioStream" id=3]
+
+
+[node name="InteractiveInventoryCube" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+sound = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer3D" parent="." index="1"]
+
+stream = ExtResource( 3 )
+attenuation_model = 0
+unit_db = 0.0
+unit_size = 1.0
+max_db = 3.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 0.0
+out_of_range_mode = 0
+bus = "Effects"
+area_mask = 1
+emission_angle_enabled = false
+emission_angle_degrees = 45.0
+emission_angle_filter_attenuation_db = -12.0
+attenuation_filter_cutoff_hz = 5000.0
+attenuation_filter_db = -24.0
+doppler_tracking = 0
+
+[connection signal="activated" from="." to="." method="_on_InteractiveInventoryCube_activated"]
+
+[connection signal="finished" from="Sound" to="." method="_on_Sound_finished"]
+
+

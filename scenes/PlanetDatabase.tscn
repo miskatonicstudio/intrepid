@@ -1,0 +1,870 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://scenes/GameViewportPopup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/PlanetDatabase.gd" type="Script" id=2]
+[ext_resource path="res://images/Planet Database_bLANK.png" type="Texture" id=3]
+[ext_resource path="res://images/0_R.png" type="Texture" id=4]
+[ext_resource path="res://images/0_D.png" type="Texture" id=5]
+[ext_resource path="res://images/1_R.png" type="Texture" id=6]
+[ext_resource path="res://images/1_D.png" type="Texture" id=7]
+[ext_resource path="res://images/2_R.png" type="Texture" id=8]
+[ext_resource path="res://images/2_D.png" type="Texture" id=9]
+[ext_resource path="res://images/3_R.png" type="Texture" id=10]
+[ext_resource path="res://images/3_D.png" type="Texture" id=11]
+[ext_resource path="res://images/4_R.png" type="Texture" id=12]
+[ext_resource path="res://images/4_D.png" type="Texture" id=13]
+[ext_resource path="res://images/Cancel_R.png" type="Texture" id=14]
+[ext_resource path="res://images/Cancel_D.png" type="Texture" id=15]
+[ext_resource path="res://images/5_R.png" type="Texture" id=16]
+[ext_resource path="res://images/5_D.png" type="Texture" id=17]
+[ext_resource path="res://images/6_R.png" type="Texture" id=18]
+[ext_resource path="res://images/6_D.png" type="Texture" id=19]
+[ext_resource path="res://images/7_R.png" type="Texture" id=20]
+[ext_resource path="res://images/7_D.png" type="Texture" id=21]
+[ext_resource path="res://images/8_R.png" type="Texture" id=22]
+[ext_resource path="res://images/8_D.png" type="Texture" id=23]
+[ext_resource path="res://images/9_R.png" type="Texture" id=24]
+[ext_resource path="res://images/9_D.png" type="Texture" id=25]
+[ext_resource path="res://images/Done_R.png" type="Texture" id=26]
+[ext_resource path="res://images/Done_D.png" type="Texture" id=27]
+[ext_resource path="res://fonts/PlanetDatabaseBold.tres" type="DynamicFont" id=28]
+[ext_resource path="res://images/Planet-Database_Star.png" type="Texture" id=29]
+[ext_resource path="res://images/Planet-Database_Denied.png" type="Texture" id=30]
+[ext_resource path="res://images/Planet-Database_granted.png" type="Texture" id=31]
+[ext_resource path="res://shaders/crt_material_small.tres" type="Material" id=32]
+[ext_resource path="res://sounds/button_01.wav" type="AudioStream" id=33]
+[ext_resource path="res://sounds/planet_database_access_denied.wav" type="AudioStream" id=34]
+[ext_resource path="res://sounds/planet_database_access_granted.wav" type="AudioStream" id=35]
+
+
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.145098, 0.247059, 0.321569, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[node name="PlanetDatabase" index="0" instance=ExtResource( 1 )]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 2 )
+_sections_unfolded = [ "Mouse", "Pause", "Popup", "Rect", "Size Flags" ]
+keyboard_enabled = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
+
+editor/display_folded = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1024.0
+margin_top = -512.0
+margin_right = 1024.0
+margin_bottom = 512.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Mouse", "Rect", "Size Flags" ]
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 2048.0
+margin_bottom = 1024.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Container" type="Container" parent="CenterContainer/TextureRect" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -811.0
+margin_top = -445.0
+margin_right = -811.0
+margin_bottom = -445.0
+rect_scale = Vector2( 0.666666, 0.666666 )
+rect_pivot_offset = Vector2( 512, 256 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="0" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 302.0
+margin_top = 213.0
+margin_right = 430.0
+margin_bottom = 341.0
+rect_scale = Vector2( 1.05, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 4 )
+texture_focused = ExtResource( 4 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="1" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 302.0
+margin_top = 323.0
+margin_right = 430.0
+margin_bottom = 451.0
+rect_scale = Vector2( 1.05, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
+texture_disabled = ExtResource( 6 )
+texture_focused = ExtResource( 6 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="2" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 302.0
+margin_top = 433.0
+margin_right = 430.0
+margin_bottom = 561.0
+rect_scale = Vector2( 1.05, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="3" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 302.0
+margin_top = 543.0
+margin_right = 430.0
+margin_bottom = 671.0
+rect_scale = Vector2( 1.05, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 10 )
+texture_disabled = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="4" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 302.0
+margin_top = 653.0
+margin_right = 430.0
+margin_bottom = 781.0
+rect_scale = Vector2( 1.05, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 12 )
+texture_disabled = ExtResource( 12 )
+texture_focused = ExtResource( 12 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="Cancel" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 302.0
+margin_top = 763.0
+margin_right = 430.0
+margin_bottom = 891.0
+rect_scale = Vector2( 1.05, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 14 )
+texture_focused = ExtResource( 14 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="5" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1478.0
+margin_top = 213.0
+margin_right = 1606.0
+margin_bottom = 341.0
+rect_scale = Vector2( 1.06, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 16 )
+texture_focused = ExtResource( 16 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="6" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1478.0
+margin_top = 323.0
+margin_right = 1606.0
+margin_bottom = 451.0
+rect_scale = Vector2( 1.06, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 19 )
+texture_hover = ExtResource( 18 )
+texture_disabled = ExtResource( 18 )
+texture_focused = ExtResource( 18 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="7" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1478.0
+margin_top = 433.0
+margin_right = 1606.0
+margin_bottom = 561.0
+rect_scale = Vector2( 1.06, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 21 )
+texture_hover = ExtResource( 20 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 20 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="8" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1478.0
+margin_top = 543.0
+margin_right = 1606.0
+margin_bottom = 671.0
+rect_scale = Vector2( 1.06, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 22 )
+texture_disabled = ExtResource( 22 )
+texture_focused = ExtResource( 22 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="9" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1478.0
+margin_top = 653.0
+margin_right = 1606.0
+margin_bottom = 781.0
+rect_scale = Vector2( 1.06, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 25 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 24 )
+texture_focused = ExtResource( 24 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="Enter" type="TextureButton" parent="CenterContainer/TextureRect/Container" index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1478.0
+margin_top = 763.0
+margin_right = 1606.0
+margin_bottom = 891.0
+rect_scale = Vector2( 1.06, 0.83 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 26 )
+texture_disabled = ExtResource( 26 )
+texture_focused = ExtResource( 26 )
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/TextureRect" index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -325.0
+margin_top = -254.0
+margin_right = 320.0
+margin_bottom = 253.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+custom_fonts/normal_font = ExtResource( 28 )
+bbcode_enabled = true
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = false
+scroll_following = true
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Anchor", "BBCode", "Margin", "Rect", "Theme", "custom_fonts", "custom_styles" ]
+
+[node name="LockScreen" type="ColorRect" parent="CenterContainer/TextureRect" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -325.0
+margin_top = -254.0
+margin_right = 320.0
+margin_bottom = 253.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.145098, 0.247059, 0.321569, 1 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Theme", "Visibility" ]
+
+[node name="Stars" type="HBoxContainer" parent="CenterContainer/TextureRect/LockScreen" index="0"]
+
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0.784314 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -252.5
+margin_top = -68.5
+margin_right = 378.5
+margin_bottom = 59.5
+rect_scale = Vector2( 0.8, 0.8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 40
+alignment = 0
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_constants" ]
+
+[node name="LockStar0" type="TextureRect" parent="CenterContainer/TextureRect/LockScreen/Stars" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 128.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 29 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="LockStar1" type="TextureRect" parent="CenterContainer/TextureRect/LockScreen/Stars" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 128.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 29 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="LockStar2" type="TextureRect" parent="CenterContainer/TextureRect/LockScreen/Stars" index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 128.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 29 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="LockStar3" type="TextureRect" parent="CenterContainer/TextureRect/LockScreen/Stars" index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 128.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 29 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Underscores" type="HBoxContainer" parent="CenterContainer/TextureRect/LockScreen" index="1"]
+
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0.784314 )
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -192.0
+margin_right = 161.0
+margin_bottom = -184.0
+rect_scale = Vector2( 0.8, 1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 40
+alignment = 1
+_sections_unfolded = [ "Rect", "Visibility", "custom_constants" ]
+
+[node name="Underscore0" type="ColorRect" parent="CenterContainer/TextureRect/LockScreen/Underscores" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 87.0
+margin_right = 215.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 128, 8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Underscore1" type="ColorRect" parent="CenterContainer/TextureRect/LockScreen/Underscores" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 255.0
+margin_right = 383.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 128, 8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Underscore2" type="ColorRect" parent="CenterContainer/TextureRect/LockScreen/Underscores" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 423.0
+margin_right = 551.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 128, 8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Underscore3" type="ColorRect" parent="CenterContainer/TextureRect/LockScreen/Underscores" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 591.0
+margin_right = 719.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 128, 8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="WrongCodeScreen" type="TextureRect" parent="CenterContainer/TextureRect" index="3"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -484.0
+margin_top = -320.0
+margin_right = 483.0
+margin_bottom = 441.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 30 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="CorrectCodeScreen" type="TextureRect" parent="CenterContainer/TextureRect" index="4"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -484.0
+margin_top = -320.0
+margin_right = 483.0
+margin_bottom = 441.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 31 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="CRT" type="ColorRect" parent="CenterContainer/TextureRect" index="5"]
+
+material = ExtResource( 32 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -325.0
+margin_top = -254.0
+margin_right = 320.0
+margin_bottom = 253.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Theme", "Visibility" ]
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 33 )
+volume_db = -20.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Effects"
+
+[node name="WrongCodeTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.1
+one_shot = true
+autostart = false
+
+[node name="ShowAllStartTimer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
+[node name="CorrectCodeTimer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="WrongCodeSound" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 34 )
+volume_db = -20.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Effects"
+
+[node name="CorrectCodeSound" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 35 )
+volume_db = -20.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Effects"
+
+[node name="KeyboardInputTimer" type="Timer" parent="." index="8"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/0" to="." method="_on_0_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/1" to="." method="_on_1_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/2" to="." method="_on_2_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/3" to="." method="_on_3_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/4" to="." method="_on_4_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/Cancel" to="." method="_on_Cancel_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/5" to="." method="_on_5_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/6" to="." method="_on_6_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/7" to="." method="_on_7_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/8" to="." method="_on_8_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/9" to="." method="_on_9_button_down"]
+
+[connection signal="button_down" from="CenterContainer/TextureRect/Container/Enter" to="." method="_on_Enter_button_down"]
+
+[connection signal="timeout" from="WrongCodeTimer" to="." method="_on_WrongCodeTimer_timeout"]
+
+[connection signal="timeout" from="ShowAllStartTimer" to="." method="_on_ShowAllStartTimer_timeout"]
+
+[connection signal="timeout" from="CorrectCodeTimer" to="." method="_on_CorrectCodeTimer_timeout"]
+
+[connection signal="timeout" from="KeyboardInputTimer" to="." method="_on_KeyboardInputTimer_timeout"]
+
+

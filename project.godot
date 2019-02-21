@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Intrepid"
-run/main_scene="res://MainScreen.tscn"
+run/main_scene="res://scenes/MainScreen.tscn"
 boot_splash/image="res://intrepid_logo.png"
 config/icon="res://icon.png"
 
