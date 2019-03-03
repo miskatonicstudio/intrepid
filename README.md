@@ -49,8 +49,8 @@ Original Blender files and textures (also public domain) can be downloaded direc
 
 The following sounds are public domain and can be downloaded from [Freesound](https://freesound.org/).
 
-* `button_01.wav`: https://freesound.org/people/LamaMakesMusic/sounds/403556/
 * `breaker.wav`: https://freesound.org/people/Deathscyp/sounds/404049/
+* `button_01.wav`: https://freesound.org/people/LamaMakesMusic/sounds/403556/
 * `click.wav`: https://freesound.org/people/NenadSimic/sounds/171697/
 * `cryo-pod-door-closing.wav`: https://freesound.org/people/davidworksonline/sounds/54974/
 * `cryo-pod-door-opening.wav`: https://freesound.org/people/davidworksonline/sounds/54974/
@@ -59,8 +59,8 @@ The following sounds are public domain and can be downloaded from [Freesound](ht
 * `fall.wav`: https://freesound.org/people/Suburbanwizard/sounds/417994/
 * `inventory_pick_up_item.wav`: https://freesound.org/people/SilverIllusionist/sounds/411177/
 * `light_flicker.wav`: https://freesound.org/people/LudwigMueller/sounds/202612/
-* `locker_unlocked.wav`: https://freesound.org/people/DesignDean/sounds/397314/
 * `locker_door.wav`: https://freesound.org/people/toddcircle/sounds/442365/
+* `locker_unlocked.wav`: https://freesound.org/people/DesignDean/sounds/397314/
 * `new_keyboard_sound.wav`: https://freesound.org/people/jim-ph/sounds/194797/
 * `one_step.wav`: https://freesound.org/people/mypantsfelldown/sounds/398937/
 * `page_turn.wav`: https://freesound.org/people/Mydo1/sounds/198963/ (the sound has been removed from Freesound)
