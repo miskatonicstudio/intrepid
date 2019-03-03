@@ -1,0 +1,6 @@
+https://www.pmsfx.com/legal-1
+* intro (PM_SAMPLER_[2018_v1.6])
+* credits (PM_SAMPLER_[2018_v1.6])
+* outro (SAMPLER)
+* main screen menu (SAMPLER)
+* door (public domain)
