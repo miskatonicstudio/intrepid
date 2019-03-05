@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/inventory_pick_up_item.wav-8865d9ae76e9277ef489e7b8a824bbe1.sample"
+
+[deps]
+
+source_file="res://sounds/inventory_pick_up_item.wav"
+dest_files=[ "res://.import/inventory_pick_up_item.wav-8865d9ae76e9277ef489e7b8a824bbe1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

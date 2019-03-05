@@ -9,7 +9,7 @@
 [ext_resource path="res://fonts/game_settings_font.tres" type="DynamicFont" id=7]
 [ext_resource path="res://scenes/CustomCursor.tscn" type="PackedScene" id=8]
 
-[node name="MainScreen" type="Container"]
+[node name="MainScreen" type="Container" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0

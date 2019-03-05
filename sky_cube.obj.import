@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/sky_cube.obj-4437c146b1cb4f050f6f55122e03564f.mesh"
+
+[deps]
+
+files=[ "res://.import/sky_cube.obj-4437c146b1cb4f050f6f55122e03564f.mesh" ]
+
+source_file="res://sky_cube.obj"
+dest_files=[ "res://.import/sky_cube.obj-4437c146b1cb4f050f6f55122e03564f.mesh", "res://.import/sky_cube.obj-4437c146b1cb4f050f6f55122e03564f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

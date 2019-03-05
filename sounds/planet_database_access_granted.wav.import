@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/planet_database_access_granted.wav-dbe8233e5756b291b04f30b5f4b78b67.sample"
+
+[deps]
+
+source_file="res://sounds/planet_database_access_granted.wav"
+dest_files=[ "res://.import/planet_database_access_granted.wav-dbe8233e5756b291b04f30b5f4b78b67.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

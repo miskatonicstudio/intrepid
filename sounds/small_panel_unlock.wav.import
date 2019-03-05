@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/small_panel_unlock.wav-a2f1fa8c9b2fef388ccf7b35345f1897.sample"
+
+[deps]
+
+source_file="res://sounds/small_panel_unlock.wav"
+dest_files=[ "res://.import/small_panel_unlock.wav-a2f1fa8c9b2fef388ccf7b35345f1897.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

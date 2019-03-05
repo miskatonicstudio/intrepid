@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/escape_door.wav-acaca6a855df29163a213dc015f3581f.sample"
+
+[deps]
+
+source_file="res://sounds/escape_door.wav"
+dest_files=[ "res://.import/escape_door.wav-acaca6a855df29163a213dc015f3581f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

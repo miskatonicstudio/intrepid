@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/small_panel_hinge.wav-b951b7df1a3db7bd7ca4598a8f1eca45.sample"
+
+[deps]
+
+source_file="res://sounds/small_panel_hinge.wav"
+dest_files=[ "res://.import/small_panel_hinge.wav-b951b7df1a3db7bd7ca4598a8f1eca45.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
