@@ -6,7 +6,7 @@ This is the source code of a computer game **Intrepid**. You can download the ga
 
 The source code does not contain the whole history of Intrepid's development. The main reason is that the `.git` folder contained all the changes applied to binary resources (images, models), which significantly increased its size, but didn't bring any value.
 
-The contents of this repository should be enough to build the entire game from scratch. One known problem is that sound loop settings are stored in `.import` files, so in order to get a looped alarm sound you will have to set it manually. If you encounter any problems with the game, let us know and we'll do our best to assist you.
+The contents of this repository should be enough to build the entire game from scratch. If you encounter any problems, let us know and we'll do our best to assist you.
 
 Intrepid was created using **Godot 3.0.6** and the codebase might not work properly with other versions of the engine.
 
