@@ -2,7 +2,7 @@ extends Container
 
 var credits = [
 	'Coding:\n\nPaweł Fertyk\nStanisław Karlik',
-	'Testing:\n\nAndy Bohan\nPedro "Rocket Lawnchair" Blandino\nKalrirr',
+	'Testing:\n\nAndy Bohan\nPedro "Rocket Lawnchair" Blandino\nKalrirr\nBernard Klatka',
 	'Game assets:\n\nZaven Alexander Boyrazian',
 	'Logo design:\n\nJoseph Diaz',
 	'Special thanks to:\n\nWiś'
