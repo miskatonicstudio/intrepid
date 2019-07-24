@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/ExitAnimation.gd" type="Script" id=1]
 [ext_resource path="res://sounds/one_step.wav" type="AudioStream" id=2]
-[ext_resource path="res://sounds/exit_music_reverse.wav" type="AudioStream" id=3]
+[ext_resource path="res://sounds/exit_music_reverse.ogg" type="AudioStream" id=3]
 
 
 [sub_resource type="Animation" id=1]

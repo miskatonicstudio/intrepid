@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/GameOutro.gd" type="Script" id=1]
 [ext_resource path="res://scenes/AutoTyper.tscn" type="PackedScene" id=2]
 [ext_resource path="res://shaders/crt_material_outro.tres" type="Material" id=3]
-[ext_resource path="res://sounds/game_outro_music.wav" type="AudioStream" id=4]
+[ext_resource path="res://sounds/game_outro_music.ogg" type="AudioStream" id=4]
 
 
 
