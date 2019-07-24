@@ -22,7 +22,6 @@ var lock_enabled = true
 func _ready():
 #	for i in range(3):
 #		tumblers[i].rotation_degrees.x = current_combination[i] * 36
-	tween.start()
 
 
 func move_tumbler(number):
@@ -40,6 +39,7 @@ func move_tumbler(number):
 		tumblers[index], 'rotation_degrees', current_rotation, target_rotation,
 		0.2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 	)
+	tween.start()
 	$Timer.start()
 	current_combination[index] = wrapi(current_combination[index], 0, 10)
 
@@ -101,6 +101,7 @@ func _on_InteractiveButton_activated():
 				tumblers[index], 'rotation_degrees', current_rotation, Vector3(0, 0, 0),
 				rotation_time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 			)
+		tween.start()
 		current_combination = [0, 0, 0]
 	$ButtonTimer.start()
 

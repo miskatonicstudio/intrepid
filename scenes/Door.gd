@@ -19,7 +19,6 @@ func _ready():
 	
 	door_right_pos_closed = door_right.translation
 	door_right_pos_open = door_right_pos_closed + Vector3(0, 0, -1)
-	tween.start()
 	
 	var emission_color = Color(0.2, 0.8, 0.9) if active else Color(0.9, 0.2, 0.2)
 	
@@ -41,6 +40,7 @@ func _on_Area_body_entered(body):
 			door_right, "translation", door_right_pos_closed, door_right_pos_open,
 			opening_time, Tween.TRANS_SINE, Tween.EASE_IN
 		)
+		tween.start()
 		$OpenSound.play()
 
 
@@ -54,4 +54,5 @@ func _on_Area_body_exited(body):
 			door_right, "translation", door_right_pos_open, door_right_pos_closed,
 			opening_time, Tween.TRANS_SINE, Tween.EASE_IN
 		)
+		tween.start()
 		$CloseSound.play()

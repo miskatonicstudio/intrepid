@@ -10,7 +10,6 @@ onready var animation = $AnimationPlayer
 
 func _ready():
 	seed(SEED)
-	tween.start()
 	env.dof_blur_near_enabled = true
 	env.dof_blur_far_enabled = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -50,6 +49,7 @@ func _on_Timer_timeout():
 		env, 'dof_blur_near_amount', blur_value, 0,
 		blur_time*0.5, Tween.TRANS_SINE, Tween.EASE_OUT_IN, blur_time*0.5
 	)
+	tween.start()
 
 
 func _input(event):

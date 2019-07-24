@@ -14,7 +14,6 @@ var current_shake = 0
 
 func _ready():
 	explosion_timer.wait_time = final_shake_sec + fadeout_sec
-	tween.start()
 	global.connect('escape_door_available', self, '_on_escape_door_available')
 	global.connect('gameplay_started', self, '_on_gameplay_started')
 
@@ -56,6 +55,7 @@ func _process(delta):
 #			sound, 'volume_db', top_volume_db, -60, time*0.7, Tween.TRANS_SINE, Tween.EASE_IN_OUT,
 #			time*0.3
 #		)
+		tween.start()
 	else:
 		shaking_enabled = false
 		$Explosion.show()
@@ -75,6 +75,7 @@ func _process(delta):
 			sound, 'volume_db', sound.volume_db, -60, fadeout_sec,
 			Tween.TRANS_SINE, Tween.EASE_IN_OUT, final_shake_sec
 		)
+		tween.start()
 
 
 func _on_ExplosionTimer_timeout():
