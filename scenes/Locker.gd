@@ -19,11 +19,6 @@ var current_combination = [0, 0, 0]
 var lock_enabled = true
 
 
-func _ready():
-#	for i in range(3):
-#		tumblers[i].rotation_degrees.x = current_combination[i] * 36
-
-
 func move_tumbler(number):
 	$Click.play()
 	var index = number - 1
