@@ -56,7 +56,6 @@ func _ready():
 	settings_background.rect_position.y = INITIAL_BAR_POS_Y
 	for button in [wifi_button, gps_button, pen_button]:
 		_toggle_button(button)
-	tween.start()
 
 func _wrap_planet_id(planet_index):
 	return wrapi(planet_index, 0, len(PLANET_NAMES))
@@ -95,6 +94,7 @@ func _end_swipe_action(swipe_delta):
 	tween.interpolate_method(
 		self, "_set_splits_delta", swipe_delta, target_delta, wait_time, Tween.TRANS_SINE, Tween.EASE_OUT
 	)
+	tween.start()
 	timer.wait_time = wait_time
 	timer.start()
 	initial_swipe_x_pos = null
@@ -141,6 +141,7 @@ func _end_bar_swipe(swipe_delta):
 		settings_background, "rect_position", settings_background.rect_position, Vector2(0, target_delta),
 		wait_time, Tween.TRANS_SINE, Tween.EASE_OUT
 	)
+	tween.start()
 	timer.wait_time = wait_time
 	timer.start()
 	bar_initial_swipe_y_pos = null
