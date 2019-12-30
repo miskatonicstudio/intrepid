@@ -8,11 +8,15 @@ The source code does not contain the whole history of Intrepid's development. Th
 
 The contents of this repository should be enough to build the entire game from scratch. If you encounter any problems, let us know and we'll do our best to assist you.
 
-Intrepid was created using **Godot 3.0.6** and the codebase might not work properly with other versions of the engine.
+Intrepid was created using **Godot Engine 3.0.6** and the codebase might not work properly with other versions of the engine.
 
 ## Licenses:
 
 While many of the resources used in the game are public domain, please consider crediting their original authors if you decide to use them for your projects.
+
+### Engine
+
+Godot Engine itself is distributed using the [MIT license](https://godotengine.org/license).
 
 ### Code
 
