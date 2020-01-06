@@ -90,12 +90,12 @@ The following sounds are licensed under Creative Commons Attribution license and
 
 The following sounds were downloaded from [PMSFX](https://www.pmsfx.com/). They are all part of the free [SAMPLER bundle](https://www.pmsfx.com/free) and cannot be redistributed without author's permission (according to the [EULA](https://www.pmsfx.com/legal-1)).
 
-* `credits.wav`: [PM_SAMPLER_2018_v1.6] `PM_SFA2_2.wav`
+* `credits.ogg`: Converted from [PM_SAMPLER_2018_v1.6] `PM_SFA2_2.wav`
 * `escape_door.wav`: [SAMPLER] `PM_FSSF_DOOR_BIG_2.wav`
-* `exit_music_reverse.wav`: [SAMPLER] `PM_Echopraxia_Impacts_Stingers_3.wav`
-* `game_outro_music.wav`: [SAMPLER] `PM_RD_Drone_5.wav`
-* `intro.wav`: [PM_SAMPLER_2018_v1.6] `PM_INT_EXC_30.wav`
-* `main_music_loop.wav`: [SAMPLER] `PM_FSSF_AMBIENCE_SOUNDSCAPE_LOOP_3.wav`
+* `exit_music_reverse.ogg`: Converted from [SAMPLER] `PM_Echopraxia_Impacts_Stingers_3.wav`
+* `game_outro_music.ogg`: Converted from [SAMPLER] `PM_RD_Drone_5.wav`
+* `intro.ogg`: Converted from [PM_SAMPLER_2018_v1.6] `PM_INT_EXC_30.wav`
+* `main_music_loop.ogg`: Converted from [SAMPLER] `PM_FSSF_AMBIENCE_SOUNDSCAPE_LOOP_3.wav`
 * `menu_button.wav`: [SAMPLER] `PM_FSSF_UI_BEEP_14.wav`
 * `power_panel_lock_code.wav`: [SAMPLER] `PM_CSPH_Beeps_47.wav`
 
