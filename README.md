@@ -1,6 +1,6 @@
 ![Intrepid logo](/intrepid_logo.png)
 
-# Intrepid
+# Intrepid ![Godot v3.4](https://img.shields.io/badge/godot-v3.4-%23478cbf)
 
 This is the source code of a computer game **Intrepid**. You can download the game from [Steam](https://store.steampowered.com/app/992860/Intrepid/), [itch.io](https://miskatonicstudio.itch.io/intrepid), or directly from [Miskatonic Studio's website](https://miskatonicstudio.com/downloads/Intrepid_1.0.2_windows_linux.zip). Mac OS beta version is available on [itch.io](https://miskatonicstudio.itch.io/intrepid) and on [our website](https://miskatonicstudio.com/downloads/Intrepid_1.0.2_macos_beta.zip).
 
