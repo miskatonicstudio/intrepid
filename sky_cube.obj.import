@@ -15,3 +15,6 @@ dest_files=[ "res://.import/sky_cube.obj-4437c146b1cb4f050f6f55122e03564f.mesh",
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
