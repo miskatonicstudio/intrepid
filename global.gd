@@ -24,7 +24,7 @@ signal power_panel_unlocked
 signal emergency_screen_closed
 
 # Settings flags
-onready var env = load(ProjectSettings.get_setting('rendering/environment/default_environment'))
+@onready var env = load(ProjectSettings.get_setting('rendering/environment/default_environment'))
 const settings_file_path = "user://Intrepid_settings.cfg"
 var settings_file = null
 var shadows_enabled = true
@@ -51,17 +51,17 @@ func _ready():
 	overload_timer.one_shot = true
 	overload_timer.autostart = false
 	add_child(overload_timer)
-	connect('shake_camera', global, 'disable_player_interaction')
-	connect('gameplay_started', global, 'start_overload_timer')
-	connect('escape_door_available', global, 'stop_overload_timer')
+	connect('shake_camera', global.disable_player_interaction)
+	connect('gameplay_started', global.start_overload_timer)
+	connect('escape_door_available', global.stop_overload_timer)
 	
-	connect('mouse_sensitivity_changed', global, '_on_mouse_sensitivity_changed')
-	connect('music_volume_changed', global, '_on_music_volume_changed')
-	connect('effects_volume_changed', global, '_on_effects_volume_changed')
-	connect('fullscreen_changed', global, '_on_fullscreen_changed')
-	connect('glow_changed', global, '_on_glow_changed')
-	connect('reflections_changed', global, '_on_reflections_changed')
-	connect('shadows_changed', global, '_on_shadows_changed')
+	connect('mouse_sensitivity_changed', global._on_mouse_sensitivity_changed)
+	connect('music_volume_changed', global._on_music_volume_changed)
+	connect('effects_volume_changed', global._on_effects_volume_changed)
+	connect('fullscreen_changed', global._on_fullscreen_changed)
+	connect('glow_changed', global._on_glow_changed)
+	connect('reflections_changed', global._on_reflections_changed)
+	connect('shadows_changed', global._on_shadows_changed)
 	
 	settings_file = ConfigFile.new()
 	var err = settings_file.load(settings_file_path)
@@ -136,18 +136,21 @@ func _on_glow_changed(value):
 
 func _on_reflections_changed(value):
 	reflections_enabled = value
-	env.ss_reflections_enabled = reflections_enabled
+	env.ssr_enabled = reflections_enabled
 	save_settings()
 
 
 func _on_fullscreen_changed(value):
 	fullscreen_enabled = value
-	OS.window_fullscreen = fullscreen_enabled
+	if fullscreen_enabled:
+		get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN
+	else:
+		get_window().mode = Window.MODE_WINDOWED
 
-	if not OS.window_fullscreen:
-		OS.window_size = Vector2(
-			ProjectSettings.get_setting('display/window/size/width'),
-			ProjectSettings.get_setting('display/window/size/height')
+	if not fullscreen_enabled:
+		get_window().size = Vector2(
+			ProjectSettings.get_setting('display/window/size/viewport_width'),
+			ProjectSettings.get_setting('display/window/size/viewport_height')
 		)
 	
 	save_settings()
@@ -187,6 +190,6 @@ func goto_scene(path):
 func _deferred_goto_scene(path):
 	current_scene.free()
 	var s = ResourceLoader.load(path)
-	current_scene = s.instance()
+	current_scene = s.instantiate()
 	get_tree().get_root().add_child(current_scene)
 	get_tree().set_current_scene(current_scene)
