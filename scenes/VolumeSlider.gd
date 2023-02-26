@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-export (String) var bus_name
+@export var bus_name : String
 
 
 func _ready():
