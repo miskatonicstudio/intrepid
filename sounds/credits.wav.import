@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/credits.wav-71d4b09340cc7d80221cc685291121a4.sample"
+type="AudioStreamWAV"
+uid="uid://putxr3t1f3t6"
+path="res://.godot/imported/credits.wav-71d4b09340cc7d80221cc685291121a4.sample"
 
 [deps]
 
 source_file="res://sounds/credits.wav"
-dest_files=[ "res://.import/credits.wav-71d4b09340cc7d80221cc685291121a4.sample" ]
+dest_files=["res://.godot/imported/credits.wav-71d4b09340cc7d80221cc685291121a4.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

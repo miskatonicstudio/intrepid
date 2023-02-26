@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/power_panel_lock_code.wav-2dd58aa635e19c43c8c98042ec3be7cd.sample"
+type="AudioStreamWAV"
+uid="uid://chkous18wrtpm"
+path="res://.godot/imported/power_panel_lock_code.wav-2dd58aa635e19c43c8c98042ec3be7cd.sample"
 
 [deps]
 
 source_file="res://sounds/power_panel_lock_code.wav"
-dest_files=[ "res://.import/power_panel_lock_code.wav-2dd58aa635e19c43c8c98042ec3be7cd.sample" ]
+dest_files=["res://.godot/imported/power_panel_lock_code.wav-2dd58aa635e19c43c8c98042ec3be7cd.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

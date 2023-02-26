@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/small_panel_unlock.wav-a2f1fa8c9b2fef388ccf7b35345f1897.sample"
+type="AudioStreamWAV"
+uid="uid://dqc5bl3gvtbph"
+path="res://.godot/imported/small_panel_unlock.wav-a2f1fa8c9b2fef388ccf7b35345f1897.sample"
 
 [deps]
 
 source_file="res://sounds/small_panel_unlock.wav"
-dest_files=[ "res://.import/small_panel_unlock.wav-a2f1fa8c9b2fef388ccf7b35345f1897.sample" ]
+dest_files=["res://.godot/imported/small_panel_unlock.wav-a2f1fa8c9b2fef388ccf7b35345f1897.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

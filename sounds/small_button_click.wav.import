@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/small_button_click.wav-c1c0d894dda3a9d9bcd2bd6f9439cb26.sample"
+type="AudioStreamWAV"
+uid="uid://cuacb10gkxb54"
+path="res://.godot/imported/small_button_click.wav-c1c0d894dda3a9d9bcd2bd6f9439cb26.sample"
 
 [deps]
 
 source_file="res://sounds/small_button_click.wav"
-dest_files=[ "res://.import/small_button_click.wav-c1c0d894dda3a9d9bcd2bd6f9439cb26.sample" ]
+dest_files=["res://.godot/imported/small_button_click.wav-c1c0d894dda3a9d9bcd2bd6f9439cb26.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

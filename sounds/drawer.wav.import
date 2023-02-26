@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/drawer.wav-679b81fd7bf0cfe56e2a4f0570a958c5.sample"
+type="AudioStreamWAV"
+uid="uid://cixd0oe45mya0"
+path="res://.godot/imported/drawer.wav-679b81fd7bf0cfe56e2a4f0570a958c5.sample"
 
 [deps]
 
 source_file="res://sounds/drawer.wav"
-dest_files=[ "res://.import/drawer.wav-679b81fd7bf0cfe56e2a4f0570a958c5.sample" ]
+dest_files=["res://.godot/imported/drawer.wav-679b81fd7bf0cfe56e2a4f0570a958c5.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

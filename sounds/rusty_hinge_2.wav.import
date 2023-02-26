@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/rusty_hinge_2.wav-f63f41210581985f7e6978e585284d5a.sample"
+type="AudioStreamWAV"
+uid="uid://b3qgx8ly83af4"
+path="res://.godot/imported/rusty_hinge_2.wav-f63f41210581985f7e6978e585284d5a.sample"
 
 [deps]
 
 source_file="res://sounds/rusty_hinge_2.wav"
-dest_files=[ "res://.import/rusty_hinge_2.wav-f63f41210581985f7e6978e585284d5a.sample" ]
+dest_files=["res://.godot/imported/rusty_hinge_2.wav-f63f41210581985f7e6978e585284d5a.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

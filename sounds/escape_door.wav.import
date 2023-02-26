@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/escape_door.wav-acaca6a855df29163a213dc015f3581f.sample"
+type="AudioStreamWAV"
+uid="uid://c4eomhvkegiiw"
+path="res://.godot/imported/escape_door.wav-acaca6a855df29163a213dc015f3581f.sample"
 
 [deps]
 
 source_file="res://sounds/escape_door.wav"
-dest_files=[ "res://.import/escape_door.wav-acaca6a855df29163a213dc015f3581f.sample" ]
+dest_files=["res://.godot/imported/escape_door.wav-acaca6a855df29163a213dc015f3581f.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

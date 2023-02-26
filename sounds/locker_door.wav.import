@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/locker_door.wav-1c7d1057b265bf5afea23d0411f6e6b6.sample"
+type="AudioStreamWAV"
+uid="uid://b1n63d6bcp13v"
+path="res://.godot/imported/locker_door.wav-1c7d1057b265bf5afea23d0411f6e6b6.sample"
 
 [deps]
 
 source_file="res://sounds/locker_door.wav"
-dest_files=[ "res://.import/locker_door.wav-1c7d1057b265bf5afea23d0411f6e6b6.sample" ]
+dest_files=["res://.godot/imported/locker_door.wav-1c7d1057b265bf5afea23d0411f6e6b6.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

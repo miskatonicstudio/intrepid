@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/planet_database_access_denied.wav-fe44a64afd68a3d85c0e31e5882d3d8b.sample"
+type="AudioStreamWAV"
+uid="uid://wwvvow1el5c"
+path="res://.godot/imported/planet_database_access_denied.wav-fe44a64afd68a3d85c0e31e5882d3d8b.sample"
 
 [deps]
 
 source_file="res://sounds/planet_database_access_denied.wav"
-dest_files=[ "res://.import/planet_database_access_denied.wav-fe44a64afd68a3d85c0e31e5882d3d8b.sample" ]
+dest_files=["res://.godot/imported/planet_database_access_denied.wav-fe44a64afd68a3d85c0e31e5882d3d8b.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

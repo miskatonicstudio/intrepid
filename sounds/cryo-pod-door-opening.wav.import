@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/cryo-pod-door-opening.wav-7b83592202b273289b5d60e134ffc176.sample"
+type="AudioStreamWAV"
+uid="uid://ef2tvenbm1vq"
+path="res://.godot/imported/cryo-pod-door-opening.wav-7b83592202b273289b5d60e134ffc176.sample"
 
 [deps]
 
 source_file="res://sounds/cryo-pod-door-opening.wav"
-dest_files=[ "res://.import/cryo-pod-door-opening.wav-7b83592202b273289b5d60e134ffc176.sample" ]
+dest_files=["res://.godot/imported/cryo-pod-door-opening.wav-7b83592202b273289b5d60e134ffc176.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

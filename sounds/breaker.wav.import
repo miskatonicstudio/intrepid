@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/breaker.wav-2408945e3bd5c8fa5f5d53ac9ccdc5c5.sample"
+type="AudioStreamWAV"
+uid="uid://csd67viyc77uh"
+path="res://.godot/imported/breaker.wav-2408945e3bd5c8fa5f5d53ac9ccdc5c5.sample"
 
 [deps]
 
 source_file="res://sounds/breaker.wav"
-dest_files=[ "res://.import/breaker.wav-2408945e3bd5c8fa5f5d53ac9ccdc5c5.sample" ]
+dest_files=["res://.godot/imported/breaker.wav-2408945e3bd5c8fa5f5d53ac9ccdc5c5.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

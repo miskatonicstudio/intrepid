@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/new_keyboard_sound.wav-260bf75178067245cd3662db28bdbb36.sample"
+type="AudioStreamWAV"
+uid="uid://c50cmbymhm8fs"
+path="res://.godot/imported/new_keyboard_sound.wav-260bf75178067245cd3662db28bdbb36.sample"
 
 [deps]
 
 source_file="res://sounds/new_keyboard_sound.wav"
-dest_files=[ "res://.import/new_keyboard_sound.wav-260bf75178067245cd3662db28bdbb36.sample" ]
+dest_files=["res://.godot/imported/new_keyboard_sound.wav-260bf75178067245cd3662db28bdbb36.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

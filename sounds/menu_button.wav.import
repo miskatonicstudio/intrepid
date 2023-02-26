@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/menu_button.wav-742a24d54450b0f2ddcf3c77cb293258.sample"
+type="AudioStreamWAV"
+uid="uid://dpwv0lelmlr2p"
+path="res://.godot/imported/menu_button.wav-742a24d54450b0f2ddcf3c77cb293258.sample"
 
 [deps]
 
 source_file="res://sounds/menu_button.wav"
-dest_files=[ "res://.import/menu_button.wav-742a24d54450b0f2ddcf3c77cb293258.sample" ]
+dest_files=["res://.godot/imported/menu_button.wav-742a24d54450b0f2ddcf3c77cb293258.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

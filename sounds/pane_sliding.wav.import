@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/pane_sliding.wav-17891d2e97443ce52a997005693b54dd.sample"
+type="AudioStreamWAV"
+uid="uid://d1dmp7fflfyow"
+path="res://.godot/imported/pane_sliding.wav-17891d2e97443ce52a997005693b54dd.sample"
 
 [deps]
 
 source_file="res://sounds/pane_sliding.wav"
-dest_files=[ "res://.import/pane_sliding.wav-17891d2e97443ce52a997005693b54dd.sample" ]
+dest_files=["res://.godot/imported/pane_sliding.wav-17891d2e97443ce52a997005693b54dd.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

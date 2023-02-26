@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/tumbler_lock.wav-005ba7b5c1424312385b217e51b025d8.sample"
+type="AudioStreamWAV"
+uid="uid://cw1c1st2vfri2"
+path="res://.godot/imported/tumbler_lock.wav-005ba7b5c1424312385b217e51b025d8.sample"
 
 [deps]
 
 source_file="res://sounds/tumbler_lock.wav"
-dest_files=[ "res://.import/tumbler_lock.wav-005ba7b5c1424312385b217e51b025d8.sample" ]
+dest_files=["res://.godot/imported/tumbler_lock.wav-005ba7b5c1424312385b217e51b025d8.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0
